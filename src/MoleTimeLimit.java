@@ -15,7 +15,7 @@ public class MoleTimeLimit extends Thread {
 	}
 
 	public void run() {
-		while (x<=900) {
+		while (x<=700) {
 			stx += 50;
 			sty += 50;
 			edx += 50;

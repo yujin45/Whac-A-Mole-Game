@@ -19,18 +19,18 @@ public class MoleCatchingGame_Game extends JPanel{
 		setBackground(new Color(227, 245, 173));
 		setLayout(null);
 		molesPanel = new MoleCatchingGame_9Moles();
-		molesPanel.setBounds(0, 80, 850,670);
+		molesPanel.setBounds(0, 80, 700,540);
 		add(molesPanel);
 		
 		scorePanel = new MoleCatchingGame_Score();
-		scorePanel.setBounds(885, 80, 200, 670);
+		scorePanel.setBounds(710, 80, 180, 540);
 		add(scorePanel);
 		
 		timeLimitPanel = new MoleCatchingGame_TimeLimit();
-		timeLimitPanel.setBounds(0, 0, 1200, 80);
+		timeLimitPanel.setBounds(0, 0, 1000, 80);
 		add(timeLimitPanel);
 		
-		//오디오파일 열어서 실행하도록 학ㅁ
+		//오디오파일 열어서 실행하도록 함
 		bgmFile = new File("MoleBGM.wav");
 		  try {
 	            

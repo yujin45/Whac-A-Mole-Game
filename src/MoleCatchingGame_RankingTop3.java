@@ -25,7 +25,6 @@ import javax.swing.JPanel;
 
 public class MoleCatchingGame_RankingTop3 extends JPanel implements ActionListener{
 	// 랭킹 3위 들면 출력해주는 부분
-	//JPanel rangkingTop3Panel;
 	static JLabel rankLabel[] = new JLabel[3];
 	JLabel scoreTitle;
 	JButton backToGameIntro;
@@ -46,8 +45,6 @@ public class MoleCatchingGame_RankingTop3 extends JPanel implements ActionListen
 		backToGameIntro.setFont(rankFont);
 		backToGameIntro.setBackground(new Color(255, 238, 254));
 		backToGameIntro.addActionListener(this);
-		
-		
 		///
 		add(scoreTitle);
 		for (int j = 0; j < rankLabel.length; j++) {
@@ -70,7 +67,6 @@ public class MoleCatchingGame_RankingTop3 extends JPanel implements ActionListen
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == backToGameIntro) {
-			// ★★★★영선님 여기 원하는대로 바꾸시면 됩니다!!
 			// ★★★★저는 우선 여기 순위 패널을 지우고 인트로 패널을 붙였어요!
 			MoleCatchingGame_Frame.center.remove(MoleCatchingGame_Frame.rank);
 			MoleCatchingGame_Frame.center.add(MoleCatchingGame_Frame.intro);

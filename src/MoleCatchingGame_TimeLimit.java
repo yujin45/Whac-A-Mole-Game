@@ -21,8 +21,8 @@ public class MoleCatchingGame_TimeLimit extends JPanel {
 	public MoleCatchingGame_TimeLimit() {
 		setLayout(null);
 		setBackground(new Color(219, 255, 251));
-			gradient = new GradientPaint(stx, sty, startColor, edx, edy, endColor, true);
-timeGone = new Rectangle2D.Double(150, 25, 900, 30);
+		gradient = new GradientPaint(stx, sty, startColor, edx, edy, endColor, true);
+timeGone = new Rectangle2D.Double(150, 25, 700, 30);
 		
 		
 	}
@@ -30,7 +30,7 @@ timeGone = new Rectangle2D.Double(150, 25, 900, 30);
 	public static void startTimeLimit(MoleCatchingGame_TimeLimit timeLimitPnael) {
 	
 		
-		timeLeft = new Rectangle2D.Double(150, 25, 900, 30);
+		timeLeft = new Rectangle2D.Double(150, 25, 700, 30);
 		moleTimeLimit = new MoleTimeLimit(timeLimitPnael, x, stx, sty, edx, edy);
 		moleTimeLimit.start();
 	}
@@ -42,8 +42,8 @@ timeGone = new Rectangle2D.Double(150, 25, 900, 30);
 		
 		//timeGone.setRect(150, 25, 900, 30);
 		// 줄어드는 시간 표현
-		timeLeft.setRect(150+moleTimeLimit.x, 25, 900-moleTimeLimit.x, 30); 
-		if(moleTimeLimit.x >= 900) {
+		timeLeft.setRect(150+moleTimeLimit.x, 25, 700-moleTimeLimit.x, 30); 
+		if(moleTimeLimit.x >= 700) {
 			// 이미 종료된 시점
 			MoleCatchingGame_RankingTop3.startRankingTop3();
 			timeOK = false;

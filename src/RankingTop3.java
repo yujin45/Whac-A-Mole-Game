@@ -26,13 +26,13 @@ public class RankingTop3 extends Thread {
 	int[] scoreArrRank = new int[4]; // 점수 저장 배열
 	
 	int nowScore = MoleCatchingGame_Score.moleTotalScore; 
-	// 총 점수 있는 것 담아옴★★★★영선님 여기 이름 바꾸면 됩니다!!
+	// 총 점수 있는 것 담아옴
 	String nowName = MoleCatchingGame_Intro.userName; 
-	// 유저 이름 담아옴 ★★★★영선님 여기 이름 바꾸면 됩니다!!
+	// 유저 이름 담아옴 
 	boolean doit = true;
 	
 	File f = new File("MoleRanking.txt");
-	// 이름 점수 저장될 텍스트 파일 ★★★★영선님 여기 이름 바꾸면 됩니다!!
+	// 이름 점수 저장될 텍스트 파일
 	static BufferedWriter w = null;
 	static BufferedReader r = null;
 	HashMap<String, String> map = new HashMap<String, String>();
@@ -47,9 +47,7 @@ public class RankingTop3 extends Thread {
 	public void run() {
 		while (doit) {
 			 nowScore = MoleCatchingGame_Score.moleTotalScore;
-			// ★★★★영선님 여기 이름 바꾸면 됩니다!!
 			 nowName = MoleCatchingGame_Intro.userName;
-			// ★★★★영선님 여기 이름 바꾸면 됩니다!!
 //////////////////
 			// 랭킹 계산하기
 			takeRanking(); // 이전 랭킹 값을 가지고옴
@@ -105,51 +103,18 @@ public class RankingTop3 extends Thread {
 				scoreArr[j] = scoreArrRank[j];
 			}
 			
-			/////////////////
-			/*
-			// 현재 것과 비교해서 등수 정해야 함.
-			int changeIndex = 0;
-			for (int j = 0; j < nameArr.length; j++) {
-				if (nowScore > scoreArr[j]) {
-					// 들어갈 자리를 찾으면 그 자리의 인덱스를 가지고 옴
-					changeIndex = j;
-					break;
-				}
-			}
-			// 삽입할 자리를 알았으니 이제 삽입하고 뒤로 넘겨줘야 함
-			String temps[] = new String[3];
-			int tempi[] = new int[3];
-			int temp = 0;
-			for (int j = 0; j < nameArr.length; j++) {
-				if (changeIndex == j) {
-					// 삽입해야 하는 위치가 나왔으면 집어넣음
-					temps[j] = nowName;
-					tempi[j] = nowScore;
-				} else {
-					// 삽입해야하는 때가 아니면 정렬되어 있는 큰 수부터 집어넣음
-					temps[j] = nameArr[temp];
-					tempi[j] = scoreArr[temp];
-					temp++; // temp는 Arr들 담당 인덱스
-				}
-			}
-			for (int j = 0; j < nameArr.length; j++) {
-				nameArr[j] = temps[j];
-				scoreArr[j] = tempi[j];
-				// 정렬한 것을 다시 집어넣어서 텍스트파일에 쓸 준비를 함
-			}
-			*/
-			///////
+			
 			clearFile(); // 이전에 있던 파일 내용 지우고 삽입할 것임
 			for (int j = 0; j < nameArr.length; j++) {
 				insert(nameArr[j], scoreArr[j]);
 				System.out.println("insert" + nameArr[j] + "=" + scoreArr[j]);
 
 			}
-//////////////////////////
+
 			one.setText("1등: " + nameArr[0] + " - " + scoreArr[0] + "점");
 			two.setText("2등: " + nameArr[1] + " - " + scoreArr[1] + "점");
 			three.setText("3등: " + nameArr[2] + " - " + scoreArr[2] + "점");
-			//////////
+
 			try {
 				sleep(5000);
 			} catch (InterruptedException e) {

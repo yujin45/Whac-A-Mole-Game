@@ -32,7 +32,6 @@ public class MoleCatchingGame_Intro extends JPanel implements ActionListener {
 	public MoleCatchingGame_Intro() {
 		setBackground(Color.white);
 		setLayout(null);
-		// ★★★★★★★★★★★영선님! 아래 1개 본인 것으로 수정해주세요★★★★★★★★★★★★
 		// 게임 설명은 이미지로 만들어서 게임명IntroImg.png형식으로 아래에 삽입 ★★★
 		gameIntroIC = new ImageIcon("MoleCatchingGameIntroImg.png");
 		
@@ -42,7 +41,7 @@ public class MoleCatchingGame_Intro extends JPanel implements ActionListener {
 		startBtn.addActionListener(this);
 		startBtn.setFont(new Font("굴림", Font.BOLD, 30));
 		startBtn.setBackground(new Color(255, 245, 233)); // 버튼 색
-		startBtn.setBounds(450, 550, 200, 100); // 버튼 위치, 크기
+		startBtn.setBounds(320, 500, 200, 100); // 버튼 위치, 크기
 		add(startBtn);
 	}
 
@@ -51,7 +50,7 @@ public class MoleCatchingGame_Intro extends JPanel implements ActionListener {
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		// 게임 방법 소개 이미지를 사이즈 조절해서 그려줌
-		g2.drawImage(gameIntro, 0, 0, 1100, 750, null);
+		g2.drawImage(gameIntro, 0, 0, 900, 650, null);
 	}
 
 	@Override
@@ -68,8 +67,8 @@ public class MoleCatchingGame_Intro extends JPanel implements ActionListener {
 			inputNameL.setFont(dfont);
 			tf = new TextField(10); // 10글자까지 입력 가능
 			tf.addActionListener(this);
-			
-			// ★★★  ▼영선님은 슈팅 마스터 이런식으로 마음대로 바꿔주세요!★★★★★★★★★
+
+
 			tf.setText("두더지_마스터"); 
 			tf.setFont(dfont);
 			inputNameP.add(inputNameL);
@@ -96,7 +95,7 @@ public class MoleCatchingGame_Intro extends JPanel implements ActionListener {
 				System.out.println("이름 입력 없음");
 				tf.setText("닉네임 다시 입력해주세요(공백없이)");
 			} else {
-				// ★★★★★★★★★★★★★★★Frame에 접근해서 패널 제거하고 붙이고 업데이트★영선님class이름으로 바꿔주세요★★★★★★★★
+				// ★★★★★★★★★★★★★★★Frame에 접근해서 패널 제거하고 붙이고 업데이트★★★★★★★★★
 				MoleCatchingGame_Frame.center.remove(MoleCatchingGame_Frame.intro);
 				MoleCatchingGame_Frame.center.add(MoleCatchingGame_Frame.game);
 				MoleCatchingGame_Frame.center.updateUI();
@@ -104,7 +103,6 @@ public class MoleCatchingGame_Intro extends JPanel implements ActionListener {
 				// 게임 화면으로 패널 교체하고 다이어로그 창 닫기
 				inputUserName.setVisible(false); // 다이어로그 안 보이게 닫음
 				
-				// ★★★★★★★▼ 이 부분은 영선님 스레드에 맞게 빼도 되는 부분!★★★★★★★★★
 				// 이름 적으면 스레드들 시작하도록 함. 
 				MoleCatchingGame_9Moles.start9Moles(); // 9x9 두더지들 스레드
 				MoleCatchingGame_Score.startMoleScore(); // score 체크 스레드
