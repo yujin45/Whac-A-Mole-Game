@@ -11,7 +11,7 @@ Swing 및 AWT와 같은 GUI 구성 요소와 Thread 및 오디오 관련 클래�
 
 ## 홈 화면
 
-<img src="./documents/UI00.PNG" width="450" height="370">
+<img src="./documents/UI00.png" width="450" height="370">
 
 - 게임 방법을 안내 페이지와 함께 시작하기 버튼이 있습니다.
 - 올라오는 두더지를 마우스로 여러번 클릭하면 두더지가 잡혀 포인트를 얻을 수 있습니다. (1회 클릭으로 잡히지 않으니 주의해주세요!)
@@ -20,14 +20,14 @@ Swing 및 AWT와 같은 GUI 구성 요소와 Thread 및 오디오 관련 클래�
 
 ## 닉네임 입력 창
 
-<img src="./documents/UI01.PNG" width="450" height="370">
+<img src="./documents/UI01.png" width="450" height="370">
 
 - 게임 시작 버튼을 누르면 닉네임 입력 창이 뜹니다.
 - 닉네임을 입력 후 확인 버튼을 눌러주세요.
 
 ## 게임 화면
 
-<img src="./documents/UI02.PNG" width="450" height="370">
+<img src="./documents/UI02.png" width="450" height="370">
 
 - 두더지를 연속으로 마우스로 클릭하여 잡아봅시다.
 - 현재 플레이어의 이름과 점수, 두더지 출현 횟수, 놓친 횟수는 우측 바에 표시됩니다.
@@ -35,7 +35,7 @@ Swing 및 AWT와 같은 GUI 구성 요소와 Thread 및 오디오 관련 클래�
 
 ## 점수 화면
 
-<img src="./documents/UI03.PNG" width="450" height="370">
+<img src="./documents/UI03.png" width="450" height="370">
 
 - 제한 시간이 끝나면 자동으로 종료됩니다.
 - 이전 플레이어들의 기록과 함께 계산되어 1등부터 3등까지 닉네임과 점수가 표시됩니다.
@@ -117,7 +117,7 @@ import java.lang.Thread;
 
 # 두더지 게임 클래스 관계
 
-<img src="./documents/PPT00.PNG" width="700" height="400">
-<img src="./documents/PPT01.PNG" width="700" height="400">
-<img src="./documents/PPT02.PNG" width="700" height="400">
-<img src="./documents/PPT03.PNG" width="700" height="400">
+<img src="./documents/PPT00.JPG" width="700" height="400">
+<img src="./documents/PPT01.JPG" width="700" height="400">
+<img src="./documents/PPT02.JPG" width="700" height="400">
+<img src="./documents/PPT03.JPG" width="700" height="400">
